@@ -26,8 +26,8 @@ private int[][] grid;
    // open site (row, col) if it is not open already
    public void open(int row1, int col1)
    {
-   	int row = row1;
-   	int col = col1;
+   	int row = row1-1;
+   	int col = col1-1;
         // if (row < 0 || row > N || col < 0 || col > N)
         //     throw new IndexOutOfBoundsException("Illegal parameter value.");
         grid[row][col] = OPEN;
