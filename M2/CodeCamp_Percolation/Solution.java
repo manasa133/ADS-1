@@ -13,7 +13,7 @@ import java.util.*;
 class Percolation{
 private int[][] grid;
 	private static final int OPEN = 1;
-	private static final int FULL = 1;
+	private static final int FULL = 0;
 	private int openSites = 0;
 	// create n-by-n grid, with all sites blocked
 	private int N;
@@ -28,31 +28,27 @@ private int[][] grid;
    {
    	int row = row1-1;
    	int col = col1-1;
-        // if (row < 0 || row > N || col < 0 || col > N)
-        //     throw new IndexOutOfBoundsException("Illegal parameter value.");
         grid[row][col] = OPEN;
         openSites++;
-
         if(row == 0){
         	wuf. union(0, (((row*N) + col) + 1));
         }
-        if (row == N - 1) { // If it's on the bottom row, connect to imaginary
-                            // site at (N*N) + 1.
+        if (row == N - 1) {
             wuf.union((N*N)+1,(((row*N) + col) + 1));
         }
-         if ((row + 1) < N) { // Make sure we don't fall off the grid
+         if ((row) < N-1) {
             if (grid[row+1][col] == OPEN)
                 wuf.union(xyTo1D(row, col), xyTo1D(row+1, col));
         }
-        if ((row - 1) >= 0) { // Make sure we don't fall off the grid
+        if (row > 0) {
             if (grid[row-1][col] == OPEN)
                 wuf.union(xyTo1D(row, col), xyTo1D(row-1, col));
         }
-        if ((col + 1) < N) { // Make sure we don't fall off the grid
+        if (col < N-1) {
             if (grid[row][col+1] == OPEN)
                 wuf.union(xyTo1D(row, col), xyTo1D(row, col+1));
         }
-        if ((col - 1) >= 0) { // Make sure we don't fall off the grid
+        if (col > 0) {
             if (grid[row][col-1] == OPEN)
                 wuf.union(xyTo1D(row, col), xyTo1D(row, col-1));
         }
@@ -61,9 +57,6 @@ private int[][] grid;
    // is site (row, col) open?
    public boolean isOpen(int row, int col)
    {
-
-        if (row < 0 || row > N || col < 0 || col > N)
-            throw new IndexOutOfBoundsException("Illegal parameter value.");
         return grid[row][col] == OPEN;
 
    }
@@ -71,7 +64,6 @@ private int[][] grid;
    public boolean isFull(int row, int col)
    {
    	return grid[row][col] == FULL;
-
    }
      // number of open sites
    public   int numberOfOpenSites()
@@ -84,14 +76,7 @@ private int[][] grid;
 		return wuf.connected(0, (N*N)+1);
    }
     private int xyTo1D(int i, int j) {
-        if (i < 0 || i > N || j < 0 || j > N)
-            throw new IndexOutOfBoundsException("Illegal parameter value.");
-        return ((i*N) + j) + 1;  // The +1 compensates for the site at the
-                                 // beginning used to facilitate the
-                                 // percolation algorithm. (There is a
-                                 // corresponding single site added to the
-                                 // end that does not affect this
-                                 // calculation.)
+        return ((i*N) + j) + 1;
     }
 }
 
