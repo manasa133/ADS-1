@@ -36,6 +36,7 @@ class percolate{
 	}
 
 	public void open(int i, int j){
+		grid[i][j] = true;
 		if(i == 0){
 			obj.union(convert(i, j), size*size);
 		}else if(i == size-1){
@@ -56,6 +57,6 @@ class percolate{
 	}
 
 	public int convert(int i, int j){
-		return i * size + j;
+		return (i * size) + j;
 	}
 }
