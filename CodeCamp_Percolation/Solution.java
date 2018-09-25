@@ -44,11 +44,11 @@ class percolate{
 		}
 		if(i < size - 1 && grid[i+1][j] == true){
 			obj.union(convert(i,j), convert(i+1,j));
-		}else if(i > 0 && grid[i-1][j] == true){
+		}if(i > 0 && grid[i-1][j] == true){
 			obj.union(convert(i, j), convert(i-1,j));
-		}else if(j > 0 && grid[i][j-1] == true){
+		}if(j > 0 && grid[i][j-1] == true){
 			obj.union(convert(i, j), convert(i,j-1));
-		}else if(j < size-1 && grid[i][j+1] == true){
+		}if(j < size-1 && grid[i][j+1] == true){
 			obj.union(convert(i, j), convert(i,j+1));
 		}
 	}
