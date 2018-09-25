@@ -57,6 +57,6 @@ class percolate{
 	}
 
 	public int convert(int i, int j){
-		return (i * size) + j;
+		return ((i * size) + j)+1;
 	}
 }
