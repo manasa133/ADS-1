@@ -39,7 +39,7 @@ class percolate{
 		grid[i][j] = true;
 		if(i == 0){
 			obj.union(convert(i, j), size*size);
-		}else if(i == size-1){
+		}if(i == size-1){
 			obj.union(convert(i, j), size*size+1);
 		}
 		if(i < size - 1 && grid[i+1][j] == true){
