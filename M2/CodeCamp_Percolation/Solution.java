@@ -36,7 +36,8 @@ private int[][] grid;
         if (row == N - 1) {
             wuf.union((N*N)+1,(((row*N) + col) + 1));
         }
-         if ((row) < N-1) {
+
+         if ((row) < N-1 ) {
             if (grid[row+1][col] == OPEN)
                 wuf.union(xyTo1D(row, col), xyTo1D(row+1, col));
         }
