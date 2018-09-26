@@ -1,0 +1,43 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+2
+[5,-1]
+[5,-1,0,99]
+3
+[-1,0,99]
+0
+99
+false
+Your Output: 
+-1
+print the list
+print the list
+-1
+print the list
+-1
+-1
+true
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+[8,12,97]
+4
+Invalid Position Exception
+[8,12,97,11]
+4
+0
+97
+1
+Index Out of Bounds Exception
+true
+Your Output: 
+print the list
+-1
+print the list
+-1
+-1
+-1
+-1
+-1
+true
+----------------------------------------
