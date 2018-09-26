@@ -1,0 +1,1 @@
+{"problem_id": "CodecampList", "check_style_score": "0/1", "version": "1", "message": "ERROR: Hidden Testcases server unreachable.", "user_id": "ManasaMona", "score": {"sample": {"0": {"execution_time": 0.09063863754272461, "passed": false}, "1": {"execution_time": 0.07544112205505371, "passed": false}}}}
