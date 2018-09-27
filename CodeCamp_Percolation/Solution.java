@@ -36,19 +36,20 @@ class percolate{
 	}
 
 	public void open(int i, int j){
+		if(grid[i][j]) return;
 		grid[i][j] = true;
 		if(i == 0){
 			obj.union(convert(i, j), size*size);
 		}if(i == size-1){
 			obj.union(convert(i, j), size*size+1);
 		}
-		if(i < size - 1 && grid[i+1][j] == true){
+		if(i < size - 1 && grid[i+1][j]){
 			obj.union(convert(i,j), convert(i+1,j));
-		}if(i > 0 && grid[i-1][j] == true){
+		}if(i > 0 && grid[i-1][j]){
 			obj.union(convert(i, j), convert(i-1,j));
-		}if(j > 0 && grid[i][j-1] == true){
+		}if(j > 0 && grid[i][j-1]){
 			obj.union(convert(i, j), convert(i,j-1));
-		}if(j < size-1 && grid[i][j+1] == true){
+		}if(j < size-1 && grid[i][j+1]){
 			obj.union(convert(i, j), convert(i,j+1));
 		}
 	}
@@ -57,6 +58,6 @@ class percolate{
 	}
 
 	public int convert(int i, int j){
-		return ((i * size) + j)+1;
+		return ((i * size) + j);
 	}
 }
