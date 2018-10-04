@@ -4,7 +4,6 @@ class Node {
 	Node next;
 	Node(String val){
 		data = val;
-
 	}
 }
 class LinkedList{
@@ -32,7 +31,7 @@ class LinkedList{
 			return;
 		}
 		start =insertAt(index, start,n,0);
-
+		display();
 	}
 	Node insertAt(int index,Node first, Node element,int count ){
 		if(count == index){
@@ -43,6 +42,18 @@ class LinkedList{
 		size++;
 		return first;
 	}
+	void reverse(){
+		reverse(null,start);
+	}
+void reverse( Node prev, Node current)
+{
+   if(current!=null){
+      reverse(current,current.next);
+      current.next = prev;
+    }else{
+    	start = prev;
+    }
+}
 	void display(){
 		Node temp = start;
 		String str="";
@@ -50,7 +61,7 @@ class LinkedList{
 			str += temp.data+", ";
 			temp = temp.next;
 		}
-		System.out.println(str);
+		System.out.println(str.substring(0,str.length()-2));
 	}
 }
 class Solution{
@@ -62,6 +73,10 @@ class Solution{
 			switch (values[0]) {
 				case "insertAt":
 				ll.insertAt(Integer.parseInt(values[1]), new Node(values[2]));
+				//display();
+				break;
+				case "reverse":
+				ll.reverse();
 				ll.display();
 				break;
 
