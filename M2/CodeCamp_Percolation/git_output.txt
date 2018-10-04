@@ -1,0 +1,6 @@
+[master 7362411] "ads1_m2_a1: 24/24 testcases passed. 0 of 0 hidden testcases passed. check_style score: 0/1 "
+ 3 files changed, 301 insertions(+)
+ create mode 100644 M2/CodeCamp_Percolation/check_style_errors.txt
+ create mode 100644 M2/CodeCamp_Percolation/git_output.txt
+ create mode 100644 M2/CodeCamp_Percolation/testcases_output.txt
+fatal: could not read Username for 'https://github.com': Input/output error
