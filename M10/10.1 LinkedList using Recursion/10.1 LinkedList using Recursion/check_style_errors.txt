@@ -1,0 +1,4 @@
+Starting audit...
+[ERROR] /home/manasa/Desktop/Students_2018/ADS1/ADS-1/M10/10.1 LinkedList using Recursion/10.1 LinkedList using Recursion/Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.
