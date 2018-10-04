@@ -21,12 +21,18 @@ class LinkedList{
 		}
 	}
 	void insertAt(int index,Node n){
+		if(index < 0 || index > size){
+			System.out.println("Can't insert at this position.");
+			return;
+		}
 		if(index == 0){
 			n.next = start;
 			start = n;
+			size++;
 			return;
 		}
 		start =insertAt(index, start,n,0);
+
 	}
 	Node insertAt(int index,Node first, Node element,int count ){
 		if(count == index){
@@ -34,6 +40,7 @@ class LinkedList{
 			return element;
 		}
 		first.next = insertAt(index,first.next,element,count+1);
+		size++;
 		return first;
 	}
 	void display(){
