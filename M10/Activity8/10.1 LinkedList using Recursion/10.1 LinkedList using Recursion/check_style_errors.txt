@@ -101,5 +101,9 @@ Starting audit...
 [ERROR] /home/manasa/Desktop/Students_2018/ADS1/ADS-1/M10/Activity8/10.1 LinkedList using Recursion/10.1 LinkedList using Recursion/Solution.java:89:46: '}' at column 18 should have line break before. [RightCurly]
 [ERROR] /home/manasa/Desktop/Students_2018/ADS1/ADS-1/M10/Activity8/10.1 LinkedList using Recursion/10.1 LinkedList using Recursion/Solution.java:89:46: '}' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] /home/manasa/Desktop/Students_2018/ADS1/ADS-1/M10/Activity8/10.1 LinkedList using Recursion/10.1 LinkedList using Recursion/Solution.java:91: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] /home/manasa/Desktop/Students_2018/ADS1/ADS-1/M10/Activity8/10.1 LinkedList using Recursion/10.1 LinkedList using Recursion/Solution.java:96:36: 'try' is not followed by whitespace. [WhitespaceAround]
+[ERROR] /home/manasa/Desktop/Students_2018/ADS1/ADS-1/M10/Activity8/10.1 LinkedList using Recursion/10.1 LinkedList using Recursion/Solution.java:96:36: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] /home/manasa/Desktop/Students_2018/ADS1/ADS-1/M10/Activity8/10.1 LinkedList using Recursion/10.1 LinkedList using Recursion/Solution.java:99:33: '}' at column 5 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
+[ERROR] /home/manasa/Desktop/Students_2018/ADS1/ADS-1/M10/Activity8/10.1 LinkedList using Recursion/10.1 LinkedList using Recursion/Solution.java:101: Line is longer than 80 characters (found 86). [LineLength]
 Audit done.
-Checkstyle ends with 102 errors.
+Checkstyle ends with 106 errors.

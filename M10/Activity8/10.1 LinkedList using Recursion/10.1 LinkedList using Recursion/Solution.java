@@ -93,8 +93,15 @@ class Solution {
 				}
 				break;
 				case "reverse":
+				try{
 				ll.reverse();
 				ll.display();
+				}
+				catch (Exception e) {
+					System.out.println("No elements to reverse.");
+
+				}
+
 				break;
 
 
