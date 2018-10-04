@@ -19,11 +19,12 @@ class LinkedList{
 			return;
 		}
 	}
-	void insertAt(int index,Node n){
+	void insertAt(int index,Node n) throws Exception{
 		if(index < 0 || index > size){
-			System.out.println("Can't insert at this position.");
-			return;
-		}
+			throw new Exception("");
+
+					}
+
 		if(index == 0){
 			n.next = start;
 			start = n;
@@ -31,7 +32,7 @@ class LinkedList{
 			return;
 		}
 		start =insertAt(index, start,n,0);
-		display();
+
 	}
 	Node insertAt(int index,Node first, Node element,int count ){
 		if(count == index){
@@ -72,8 +73,15 @@ class Solution{
 			String[] values = sc.nextLine().split(" ");
 			switch (values[0]) {
 				case "insertAt":
-				ll.insertAt(Integer.parseInt(values[1]), new Node(values[2]));
-				//display();
+				try{
+					ll.insertAt(Integer.parseInt(values[1]), new Node(values[2]));
+				ll.display();
+				}
+
+				catch (Exception e) {
+					System.out.println("Can't insert at this position.");
+
+				}
 				break;
 				case "reverse":
 				ll.reverse();
