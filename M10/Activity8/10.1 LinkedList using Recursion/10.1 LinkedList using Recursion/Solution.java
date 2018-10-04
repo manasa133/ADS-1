@@ -38,13 +38,17 @@ class LinkedList{
 
 	// 	}
 
-	void insertAt(int pos, String val){
+	void insertAt(int pos, String val) throws Exception{
+		if(pos<0 || pos>size){
+			throw new Exception();
+		}
 		Node obj = new Node(val);
 		head = insertAt(pos,head,obj,0);
 	}
 	Node insertAt(int pos,Node first, Node obj,int count){
 		if(pos == count){
 			obj.next = first;
+			size++;
 			return obj;
 		}
 		first.next = insertAt(pos,first.next,obj,count+1);
@@ -81,8 +85,12 @@ class Solution {
 			String[] input = sc.nextLine().split(" ");
 			switch (input[0]) {
 				case "insertAt":
-				ll.insertAt(Integer.parseInt(input[1]),input[2]);
-				ll.display();
+				try{ll.insertAt(Integer.parseInt(input[1]),input[2]);
+				ll.display();}
+				catch (Exception e) {
+					System.out.println("Can't insert at this position.");
+
+				}
 				break;
 				case "reverse":
 				ll.reverse();
