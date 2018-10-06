@@ -147,7 +147,7 @@ class Solution {
 			count3++;
 		}
 		int jj=0;
-		if(i!=vacancies){
+		while(i!=vacancies){
 			if(array[jj]!=null){
 		reservation[i++] = array[jj];
 			}
