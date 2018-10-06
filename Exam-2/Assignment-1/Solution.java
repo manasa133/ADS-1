@@ -81,12 +81,19 @@ class Student implements Comparable<Student>{
 class Solution {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int numStudents = Integer.parseInt(sc.nextLine());
-		int vacancies = Integer.parseInt(sc.nextLine());
-		int unreservedCategory = Integer.parseInt(sc.nextLine());
-		int bccategory =  Integer.parseInt(sc.nextLine());;
-		int sccategory =  Integer.parseInt(sc.nextLine());;
-		int stcategory =  Integer.parseInt(sc.nextLine());;
+		// int numStudents = Integer.parseInt(sc.nextLine());
+		// int vacancies = Integer.parseInt(sc.nextLine());
+		// int unreservedCategory = Integer.parseInt(sc.nextLine());
+		// int bccategory =  Integer.parseInt(sc.nextLine());;
+		// int sccategory =  Integer.parseInt(sc.nextLine());;
+		// int stcategory =  Integer.parseInt(sc.nextLine());;
+			int numStudents = (sc.nextInt());
+		int vacancies = (sc.nextInt());
+		int unreservedCategory = (sc.nextInt());
+		int bccategory =   (sc.nextInt());;
+		int sccategory =   (sc.nextInt());;
+		int stcategory =   (sc.nextInt());;
+
 		Student array[] = new Student[numStudents];
 		//Merge m = new Merge();
 		for(int i =0 ;i <numStudents;i++){
