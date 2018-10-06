@@ -103,9 +103,12 @@ class Solution {
 		}
 		int count2=0,j=0;
 		while(count2!=bccategory){
-			while(array[j]==null || !array[j].resrvtn.equals("BC")){
+			while(j<array.length && (array[j]==null || !array[j].resrvtn.equals("BC"))){
 				j++;
 
+			}
+			if(j==array.length){
+			break;
 			}
 			reservation[i++] = array[j];
 			array[j] = null;
@@ -114,9 +117,13 @@ class Solution {
 		}
 		int count4=0,j2=0;
 		while(count4!=stcategory){
-		while(array[j2] ==null || !array[j2].resrvtn.equals("ST")){
+		while(j2<array.length &&(array[j2] ==null || !array[j2].resrvtn.equals("ST"))){
+
 			j2++;
 
+		}
+		if(j2==array.length){
+			break;
 		}
 		reservation[i++] = array[j2];
 		array[j2] = null;
