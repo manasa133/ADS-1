@@ -157,6 +157,7 @@ class Solution {
 
 	System.out.println();
 	//System.out.println(Arrays.toString(reservation));
+	Merge.sort(reservation);
 	Merge.show(reservation);
 
 
