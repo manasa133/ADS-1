@@ -134,10 +134,13 @@ class Solution {
 
 		int count3=0,j1=0;
 		while(count3!=sccategory){
-			while( array[j1] ==null || !array[j1].resrvtn.equals("SC")){
+			while(j1<array.length &&( array[j1] ==null || !array[j1].resrvtn.equals("SC"))){
 				j1++;
 
 			}
+			if(j1==array.length){
+			break;
+		}
 			reservation[i++] = array[j1];
 			array[j1] = null;
 			j1++;
