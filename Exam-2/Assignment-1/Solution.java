@@ -95,6 +95,53 @@ class Solution {
 		}
 		Merge.sort(array);
 		Merge.show(array);
+		Student reservation[] =  new Student[vacancies];
+		int i = 0;
+		for( i = 0;i< unreservedCategory;i++){
+			reservation[i]  = array[i];
+			array[i]=null;
+		}
+		int count2=0,j=0;
+		while(count2!=bccategory){
+			while(array[j]==null || !array[j].resrvtn.equals("BC")){
+				j++;
+
+			}
+			reservation[i++] = array[j];
+			array[j] = null;
+			j++;
+			count2++;
+		}
+		int count4=0,j2=0;
+		while(count4!=stcategory){
+		while(array[j2] ==null || !array[j2].resrvtn.equals("ST")){
+			j2++;
+
+		}
+		reservation[i++] = array[j2];
+		array[j2] = null;
+		j2++;
+		count4++;
+	}
+
+
+		int count3=0,j1=0;
+		while(count3!=sccategory){
+			while( array[j1] ==null || !array[j1].resrvtn.equals("SC")){
+				j1++;
+
+			}
+			reservation[i++] = array[j1];
+			array[j1] = null;
+			j1++;
+			count3++;
+		}
+
+	System.out.println();
+	//System.out.println(Arrays.toString(reservation));
+	Merge.show(reservation);
+
+
 
 
 

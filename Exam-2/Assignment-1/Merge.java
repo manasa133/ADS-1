@@ -21,7 +21,6 @@
  *
  ******************************************************************************/
 
-
 /**
  *  The {@code Merge} class provides static methods for sorting an
  *  array using mergesort.
@@ -43,7 +42,7 @@ public class Merge {
         // precondition: a[lo .. mid] and a[mid+1 .. hi] are sorted subarrays
         assert isSorted(a, lo, mid);
         assert isSorted(a, mid+1, hi);
- System.out.println(("Merge lo "+lo+" hi "+ hi));
+
         // copy to aux[]
         for (int k = lo; k <= hi; k++) {
             aux[k] = a[k];
@@ -66,8 +65,8 @@ public class Merge {
     private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
         if (hi <= lo) return;
         int mid = lo + (hi - lo) / 2;
-        sort(aux, a, lo, mid);
-        sort(aux, a, mid + 1, hi);
+        sort(a, aux, lo, mid);
+        sort(a, aux, mid + 1, hi);
         merge(a, aux, lo, mid, hi);
     }
 
@@ -76,7 +75,7 @@ public class Merge {
      * @param a the array to be sorted
      */
     public static void sort(Comparable[] a) {
-        Comparable[] aux =a;
+        Comparable[] aux = new Comparable[a.length];
         sort(a, aux, 0, a.length-1);
         assert isSorted(a);
     }
@@ -153,9 +152,9 @@ public class Merge {
     }
 
     // print array to standard output
-     static void show(Comparable[] a) {
+    static void show(Comparable[] a) {
         for (int i = 0; i < a.length; i++) {
-           System.out.println(a[i]);
+            System.out.println(a[i]);
         }
     }
 
@@ -165,34 +164,9 @@ public class Merge {
      *
      * @param args the command-line arguments
      */
-    public static void main(String[] args) {
-       // String[] a = StdIn.readAllStrings();
-    	Integer a[]  ={55,35,86,42,31};
-        Merge.sort(a);
-        show(a);
-    }
+    // public static void main(String[] args) {
+    //     String[] a = StdIn.readAllStrings();
+    //     Merge.sort(a);
+    //     show(a);
+    // }
 }
-
-/******************************************************************************
- *  Copyright 2002-2018, Robert Sedgewick and Kevin Wayne.
- *
- *  This file is part of algs4.jar, which accompanies the textbook
- *
- *      Algorithms, 4th edition by Robert Sedgewick and Kevin Wayne,
- *      Addison-Wesley Professional, 2011, ISBN 0-321-57351-X.
- *      http://algs4.cs.princeton.edu
- *
- *
- *  algs4.jar is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  algs4.jar is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with algs4.jar.  If not, see http://www.gnu.org/licenses.
- ******************************************************************************/
