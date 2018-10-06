@@ -93,6 +93,7 @@ class Solution {
 		int bccategory =   (sc.nextInt());;
 		int sccategory =   (sc.nextInt());;
 		int stcategory =   (sc.nextInt());;
+		sc.nextLine();
 
 		Student array[] = new Student[numStudents];
 		//Merge m = new Merge();
