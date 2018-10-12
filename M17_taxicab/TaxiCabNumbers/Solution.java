@@ -45,9 +45,9 @@ class Solution {
                 run++;
                 if (run == 2){
                 	pairCount = pairCount+1;
-                	System.out.println(pairCount);
-                	System.out.println(prev.sum + " = " + prev);
-                	System.out.println(" = " + curr);
+                	// System.out.println(pairCount);
+                	// System.out.println(prev.sum + " = " + prev);
+                	// System.out.println(" = " + curr);
                 } //System.out.println(prev.sum + " = " + prev);
                 //System.out.println(" = " + curr);
 
@@ -60,7 +60,7 @@ class Solution {
             else {
                 if (run > 1) {
 
-                	//nth = 0;
+                	//th = 0;
                 	//pairCount =0 ;
                 }
                 run = 1;
