@@ -50,6 +50,7 @@ class Solution {
                 	// System.out.println(" = " + curr);
                 } //System.out.println(prev.sum + " = " + prev);
                 //System.out.println(" = " + curr);
+                System.out.println(run);
 
                  if(pairCount == N){
 	            	System.out.println(prev.sum);
