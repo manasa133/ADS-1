@@ -51,7 +51,7 @@ class Solution {
                 } //System.out.println(prev.sum + " = " + prev);
                 //System.out.println(" = " + curr);
 
-                 if(pairCount == 460){
+                 if(pairCount == N){
 	            	System.out.println(prev.sum);
 	            	break;
             	}
@@ -59,6 +59,7 @@ class Solution {
             }
             else {
                 if (run > 1) {
+
 
                 	//th = 0;
                 	//pairCount =0 ;
