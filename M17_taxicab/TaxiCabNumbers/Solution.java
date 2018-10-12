@@ -38,14 +38,14 @@ class Solution {
 
         Taxicab prev = new Taxicab(0, 0);   // sentinel
         int pairCount = 1;
-        int nth = 0;
+        int nth = 1;
 
         while (!pq.isEmpty()) {
             Taxicab curr = pq.delMin();
             // current sum is same as previous sum
             if (prev.sum == curr.sum) {
                 run++;
-                nth= nth+1;
+
                 if (run == 2) System.out.println(prev.sum + " = " + prev);
                 System.out.println(" = " + curr);
                 pairCount = pairCount+1;
@@ -57,6 +57,7 @@ class Solution {
             else {
                 if (run > 1) //StdOut.println();
                 run = 1;
+                nth= nth+1;
             }
             prev = curr;
 
