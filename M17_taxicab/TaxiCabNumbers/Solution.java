@@ -43,14 +43,14 @@ class Solution {
             // current sum is same as previous sum
             if (prev.sum == curr.sum) {
                 run++;
-                if (run == 2){
+                if (run == M){
                 	pairCount = pairCount+1;
                 	// System.out.println(pairCount);
                 	// System.out.println(prev.sum + " = " + prev);
                 	// System.out.println(" = " + curr);
                 } //System.out.println(prev.sum + " = " + prev);
                 //System.out.println(" = " + curr);
-                System.out.println(run);
+                //System.out.println(run);
 
                  if(pairCount == N){
 	            	System.out.println(prev.sum);
@@ -60,10 +60,6 @@ class Solution {
             }
             else {
                 if (run > 1) {
-
-
-                	//th = 0;
-                	//pairCount =0 ;
                 }
                 run = 1;
 
